@@ -1,0 +1,57 @@
+<%= form_for @product do |f| %>
+
+<div class="form-group">
+	<label for="select1">Select Product Name</label>
+	<select class="form-control" id="select1">
+		<option>Small Package</option>
+		<option>Large Package</option>
+		<option>Extra Large Package</option>
+		<option>Carry On</option>
+		<option>Checked Bag</option>
+		<option>Oversized Bag</option>
+		<option>Ski Bag</option>
+		<option>Snowboard Bag</option>
+		<option>Double Ski Bag</option>
+		<option>Double Snowbaord Bag</option>
+		<option>Snowboot Bag</option>
+	</select>
+</div>
+
+	<div class="form-group">
+	  <label for="select2">Select Product Type</label>
+	  <select class="form-control" id="select2">
+	    <option>Golf</option>
+	    <option>Luggage</option>
+	    <option>Ski</option>
+	  </select>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :length %>
+		<%= f.text_field :length, class: "form-control" %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :width %>
+		<%= f.text_field :width, class: "form-control" %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :height %>
+		<%= f.text_field :height, class: "form-control" %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :weight %>
+		<%= f.text_field :weight, class: "form-control" %>
+	</div>
+
+	<div class="form-group">
+	<%= f.submit class: "btn btn-primary" %>
+	</div>
+
+	<div>
+   <%= link_to "Cancel", products_path, class: 'btn btn-warning' %>
+  </div>
+
+<% end %>

@@ -6,4 +6,6 @@ class Product
   field :width, type: Integer
   field :height, type: Integer
   field :weight, type: Integer
+
+  validates_presence_of :name, :type
 end
